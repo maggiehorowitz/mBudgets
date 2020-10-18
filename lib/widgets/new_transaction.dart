@@ -23,10 +23,15 @@ class _NewTransactionState extends State<NewTransaction> {
       return;
     }
 
+    ///with widget. --> you can access the connected widget in a Stateful widget
     widget.addTx(
       enteredTitle,
       enteredAmount,
     );
+
+    Navigator.of(context).pop();
+
+    ///automatically close the popup on submission of add transaction
   }
 
   @override
